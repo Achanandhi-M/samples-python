@@ -18,7 +18,7 @@ COPY . .
 # Run migrations and start the server with proper signal handling
 
 # FOR RECORD MODE
-#ENTRYPOINT ["sh", "-c", "python manage.py makemigrations && python manage.py migrate && exec python manage.py runserver 0.0.0.0:8000"]
+ ENTRYPOINT ["sh", "-c", "python manage.py makemigrations && python manage.py migrate && exec python manage.py runserver 0.0.0.0:8000"]
 
 # FOR TEST MODE
- ENTRYPOINT ["sh", "-c", "exec python -m coverage run manage.py runserver 0.0.0.0:8000 --noreload"]
+# ENTRYPOINT ["sh", "-c", "exec python -m coverage run manage.py runserver 0.0.0.0:8000 --noreload"]
